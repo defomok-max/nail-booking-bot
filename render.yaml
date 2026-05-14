@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: nail-booking-bot
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBAPP_URL
+        sync: false
+      - key: ADMIN_USER_ID
+        sync: false
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
